@@ -206,7 +206,6 @@ function tiktokdownload(url) {
             }).then(({ data }) => {
                 const $ = cheerio.load(data)
                 const result = $('#results-list > div:nth-child(2) > div.download > a')?.attr('href')
-                   
                 resolve(result);
             })
             .catch(e => {
